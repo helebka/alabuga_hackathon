@@ -1,4 +1,4 @@
-SQLAlchemy
 flask
-sqlalchemy-serializer
 python-dotenv
+textblob
+spacy
