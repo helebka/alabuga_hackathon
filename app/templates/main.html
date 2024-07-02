@@ -20,7 +20,7 @@
         </a>
 
         <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Главная</a></li>
+            <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Главная</a></li>
         </ul>
     </header>
 </div>
@@ -35,14 +35,17 @@
             Введите ссылку на статью, чтобы узнать о компаниях и отношении к этим компаниям в статье.
         </p>
         <div class="d-inline-block gap-2 mb-5">
-            <form action="" method="POST">
+            <form name="form" method="POST">
                 <div class="form-floating" style="margin-bottom: 5px">
                     <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
                            name="inp">
-                    <label for="floatingInput">Введите ссылку</label>
+                    <label for="floatingInput">Введите ссылку/текст</label>
                 </div>
-                <button class="btn btn-primary w-100 py-2" type="submit">Отправить</button>
+                <button class="btn btn-primary w-100 py-2" type="submit" id="btn1">Отправить</button>
             </form>
+            {% if company %}
+            <input type="text" class="form-control" id="floatingInput1" placeholder="{{ company[0]}}: {{ company[1] }}" disabled>
+            {% endif %}
         </div>
     </div>
 
