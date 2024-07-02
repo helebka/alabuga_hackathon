@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask
+from flask import Flask, redirect
 from dotenv import load_dotenv
 from flask import request, render_template
 
@@ -20,6 +20,8 @@ def index_get():
 @app.route("/", methods=["POST"])
 def index_post():
     url = request.form.get("inp")
+    if not url:
+        return redirect("/")
     if url[:4] == "http":
         text = parser(url)
     else:

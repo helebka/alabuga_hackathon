@@ -10,8 +10,8 @@ def extract_company(text: str) -> str:
     companies = [ent.text for ent in doc_ru.ents if ent.label_ == "ORG"]
     
     if not companies:
-        # company = "Неизвестная компания"
-        company = "НН"
+        company = "Неизвестная компания"
+        # company = ""
     else:
         company = max(companies, key=lambda x: companies.count(x))
         
