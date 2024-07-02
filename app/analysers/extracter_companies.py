@@ -1,6 +1,6 @@
 import spacy
 
-nlp_ru = spacy.load("ru_core_news_sm")
+nlp_ru = spacy.load("ru_core_news_lg")
 
 
 def extract_company(text: str) -> str:

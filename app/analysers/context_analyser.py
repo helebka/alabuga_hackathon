@@ -6,7 +6,7 @@ def analyze_emotional_content(text: str) -> str:
     sentiment = blob.sentiment.polarity
     
     if sentiment < -0.1:
-        return "NEGAIVE"
+        return "NEGATIVE"
     elif -0.1 <= sentiment <= 0.1:
         return "NEUTRAL"
     else:

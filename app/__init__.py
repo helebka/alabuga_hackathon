@@ -11,6 +11,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
+
 @app.route("/", methods=["GET"])
 def index_get():
     return render_template("/main.html")
@@ -25,4 +26,4 @@ def index_post():
         text = url
     
     answer = text_analyser(text)
-    return render_template("/main.html", company=answer)
+    return render_template("/main.html", company=answer[0], mood=answer[1])

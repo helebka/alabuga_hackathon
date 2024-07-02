@@ -2,3 +2,7 @@ flask
 python-dotenv
 textblob
 spacy
+requests
+bs4
+deep_translator
+pymorphy3
