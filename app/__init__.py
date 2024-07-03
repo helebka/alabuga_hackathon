@@ -6,6 +6,7 @@ from flask import request, render_template
 
 from app.analysers.text_analyser import text_analyser
 from app.get_web_data.parser import parser
+from app.work_with_files.create_json import create_json
 
 load_dotenv()
 
