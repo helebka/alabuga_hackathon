@@ -1,5 +1,6 @@
 from textblob import TextBlob
 
+
 def analyze_emotional_content(text: str) -> str:
 
     blob = TextBlob(text)

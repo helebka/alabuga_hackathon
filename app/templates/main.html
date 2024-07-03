@@ -45,7 +45,8 @@
             </form>
             {% if company %}
             <label class="form-control">{{company}}</label>
-            <label class="form-control">{{mood}}</label>
+            <label class="form-control">{{estimate}}</label>
+            <label class="form-control"><a href="/static/data{{file_path}}.json" download>Скачать JSON</a></label>
             {% endif %}
         </div>
     </div>

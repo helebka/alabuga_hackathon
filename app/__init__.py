@@ -1,3 +1,4 @@
+import datetime
 import os
 
 from flask import Flask, redirect
@@ -7,6 +8,7 @@ from flask import request, render_template
 from app.analysers.text_analyser import text_analyser
 from app.get_web_data.parser import parser
 from app.work_with_files.create_json import create_json
+import json
 
 load_dotenv()
 
@@ -27,6 +29,8 @@ def index_post():
         text = parser(url)
     else:
         text = url
-    
+
     answer = text_analyser(text)
-    return render_template("/main.html", company=answer[0], mood=answer[1])
+    data = create_json(answer[0], answer[1])
+
+    return render_template("/main.html", company=answer[0], estimate=answer[1], file_path=data)
